@@ -1,1 +1,3 @@
 # Ejercicio06-05
+
+# Realice el analisis (identificar clases, atributos metodos), diseño (diagrama de clases ) y construccion (patron MVC) de la siguiente situacion: se desea gestionar un plan de telefonia movil, el plan tiene un numero de celular un operador, una cantidad de minutos y un costo por minuto, calcular el total a pagar teniendo en cuenta que si el operador es WOM tiene un 50% de descuento, usar minimo dos metodos constructores. 
