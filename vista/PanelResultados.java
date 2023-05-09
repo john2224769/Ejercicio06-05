@@ -35,9 +35,9 @@ public class PanelResultados extends JPanel
     }
 
     // Metodo de acceso a la informacion
-    public void mostrarResultado()
+    public void mostrarResultado(String msj)
     {
-        taResultado.setText(msj);
+        taResultados.setText(msj);
     }
 
     public void borrar()

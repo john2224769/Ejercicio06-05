@@ -2,6 +2,9 @@ package vista;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -9,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class PanelEntradaDatos extends JPanel
+public class PanelEntradaDatos extends JPanel implements ItemListener
 {
     // atributos 
 
@@ -73,9 +76,8 @@ public class PanelEntradaDatos extends JPanel
         cbOperadores.addItem("Virgin");
         cbOperadores.addItem("Claro");
         cbOperadores.addItem("WOM");
-        this.add(cbOperadores);
-
-
+        this.add(cbOperadores); 
+        cbOperadores.addItemListener(this);
 
         // Borde del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Datos de entrada");
@@ -89,6 +91,21 @@ public class PanelEntradaDatos extends JPanel
         return tfNumeroCelular.getText();
     }
 
+    public String getCantidadMinutos ()
+    {
+        return tfCantidadMinutos.getText();
+    }
+
+    public String getCostoMinutos ()
+    {
+        return tfCostoMinuto.getText();
+    }
+
+    public String getOperador()
+    {
+        return (String) cbOperadores.getSelectedItem();
+    }
+
     // Borrar el contenido de la caja de texto
     public void borrar()
     {
@@ -96,6 +113,11 @@ public class PanelEntradaDatos extends JPanel
         tfCantidadMinutos.setText(" ");
         tfCostoMinuto.setText(" ");
         cbOperadores.setSelectedItem(" ");
+    }
+
+    @Override
+    public void itemStateChanged(ItemEvent e) 
+    {
 
     }
 }

@@ -15,7 +15,7 @@ public class PlanTelefonia
 
     }
 
-    public PlanTelefonia(int pNumeroCelular, int pCantidadMinutos, double pCostoMinuto, String pOperador)
+    public PlanTelefonia(int pNumeroCelular, int pCantidadMinutos, double pCostoMinuto, String pOperador )
     {
         this.numeroCelular = pNumeroCelular;
         this.cantidadMinutos = pCantidadMinutos;
@@ -43,32 +43,42 @@ public class PlanTelefonia
         return operador;
     }
 
-    public void setNumeroCeluar(int numeroCelular)
+    public void setNumeroCeluar(int pNumeroCelular)
     {
-        this.numeroCelular=numeroCelular;
+        this.numeroCelular=pNumeroCelular;
     } 
 
-    public void setCantidadMinutos(int cantidadMinutos)
+    public void setCantidadMinutos(int pCantidadMinutos)
     {
-        this.cantidadMinutos=cantidadMinutos;
+        this.cantidadMinutos=pCantidadMinutos;
     }
 
-    public void setCostoMinuto(double costoMinuto)
+    public void setCostoMinuto(double pCostoMinuto)
     {
-        this.costoMinuto=costoMinuto;
+        this.costoMinuto=pCostoMinuto;
     }
 
-    public double calcularCostoPlan ()
+    public void setOperador(String pOperador)
     {
-        if (operador.equals("WOM"))
+        operador=pOperador;
+    }
+
+    public void  calcularCostoPlan (int cantidadMinutos, double costoMinuto)
+    {
+        if(getOperador().equals("WOM"))
         {
             costoPlan=(cantidadMinutos*costoMinuto)/2;
         }
-        else
+        else 
         {
             costoPlan=cantidadMinutos*costoMinuto;
         }
+    }
+
+    public double getCostoPlan()
+    {
         return costoPlan;
     }
+
 
 }
