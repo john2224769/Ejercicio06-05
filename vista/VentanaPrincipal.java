@@ -38,7 +38,7 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelResultados);
 
         // caracteristicas de la ventana 
-        this.setTitle("Area y perimeto del circulo" );
+        this.setTitle("John Anderson Sotelo Rueda" );
         this.setSize(500,540);
         this.setLocation(100,100);
         this.setResizable(true);
